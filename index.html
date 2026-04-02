@@ -19,6 +19,7 @@
   --r:8px;--r2:12px;
   --p1:#2563c8;--p1L:rgba(37,99,200,0.10); /* 名古屋 */
   --p2:#1a7a4a;--p2L:rgba(26,122,74,0.10); /* オリセン */
+  --p3:#7c3aed;--p3L:rgba(124,58,237,0.10); /* 3月案件 */
 }
 body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;font-size:14px}
 #shell{display:flex;min-height:100vh}
@@ -29,10 +30,12 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
 .logo-title{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent)}
 .logo-sub{font-size:10px;color:var(--faint);margin-top:2px}
 /* project tabs */
-.proj-tabs{display:flex;gap:5px;padding:10px 11px;border-bottom:1px solid var(--border)}
-.proj-tab{flex:1;padding:7px 4px;border-radius:var(--r);border:1.5px solid var(--border2);background:none;cursor:pointer;font-size:11px;font-weight:600;color:var(--sub);font-family:inherit;transition:all .15s;text-align:center;line-height:1.4}
+.proj-tabs{display:flex;flex-direction:column;gap:4px;padding:8px 10px;border-bottom:1px solid var(--border)}
+.proj-tab{width:100%;padding:7px 10px;border-radius:var(--r);border:1.5px solid var(--border2);background:none;cursor:pointer;font-size:11px;font-weight:600;color:var(--sub);font-family:inherit;transition:all .15s;text-align:left;display:flex;align-items:center;gap:6px;line-height:1.3}
+.proj-tab .tab-date{font-weight:400;opacity:.65;font-size:10px;margin-left:auto}
 .proj-tab.p1.active{background:var(--p1);color:#fff;border-color:var(--p1)}
 .proj-tab.p2.active{background:var(--p2);color:#fff;border-color:var(--p2)}
+.proj-tab.p3.active{background:var(--p3);color:#fff;border-color:var(--p3)}
 .proj-tab:not(.active):hover{background:var(--bg)}
 /* nav */
 nav{padding:10px 10px;flex:1}
@@ -41,6 +44,7 @@ nav{padding:10px 10px;flex:1}
 .nav-item.active{background:var(--accentL);color:var(--accent);font-weight:500}
 .nav-item.p1.active{background:var(--p1L);color:var(--p1)}
 .nav-item.p2.active{background:var(--p2L);color:var(--p2)}
+.nav-item.p3.active{background:var(--p3L);color:var(--p3)}
 .nav-icon{font-size:14px;width:18px;text-align:center}
 /* sidebar footer */
 .side-footer{padding:11px 13px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:5px}
@@ -67,6 +71,7 @@ nav{padding:10px 10px;flex:1}
 .proj-banner{display:flex;align-items:center;gap:10px;margin-bottom:22px;padding:10px 16px;border-radius:var(--r2);font-size:13px;font-weight:600}
 .proj-banner.p1{background:var(--p1L);color:var(--p1)}
 .proj-banner.p2{background:var(--p2L);color:var(--p2)}
+.proj-banner.p3{background:var(--p3L);color:var(--p3)}
 .proj-banner-name{flex:1}
 .proj-banner-date{font-size:11px;font-weight:400;opacity:.75}
 /* section */
@@ -85,6 +90,7 @@ nav{padding:10px 10px;flex:1}
 .prog-bar{height:100%;border-radius:4px;transition:width .6s ease}
 .prog-bar.p1{background:linear-gradient(90deg,var(--p1),#4899f5)}
 .prog-bar.p2{background:linear-gradient(90deg,var(--p2),#2ecc8f)}
+.prog-bar.p3{background:linear-gradient(90deg,var(--p3),#a78bfa)}
 /* tasks */
 .task-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
 .task-row:last-child{border-bottom:none}
@@ -165,6 +171,7 @@ select.form-input option{background:#fff}
 .rm-bar.done      {background:var(--greenL);border:1.5px solid var(--green);color:var(--green);opacity:.6}
 .rm-bar.proj-p1   {background:var(--p1L);border:1.5px solid var(--p1);color:var(--p1)}
 .rm-bar.proj-p2   {background:var(--p2L);border:1.5px solid var(--p2);color:var(--p2)}
+.rm-bar.proj-p3   {background:var(--p3L);border:1.5px solid var(--p3);color:var(--p3)}
 .rm-today{position:absolute;top:0;bottom:0;width:2px;background:var(--accent);z-index:5;pointer-events:none}
 .rm-today-lbl{position:absolute;top:2px;font-size:9px;font-weight:700;color:var(--accent);white-space:nowrap;transform:translateX(-50%)}
 .rm-vline{position:absolute;top:0;bottom:0;width:1px;background:var(--border);z-index:1;pointer-events:none}
@@ -173,6 +180,7 @@ select.form-input option{background:#fff}
 .rm-proj-pill{font-size:10px;padding:1px 7px;border-radius:10px;font-weight:600;flex-shrink:0}
 .rm-proj-pill.p1{background:var(--p1L);color:var(--p1)}
 .rm-proj-pill.p2{background:var(--p2L);color:var(--p2)}
+.rm-proj-pill.p3{background:var(--p3L);color:var(--p3)}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -187,8 +195,9 @@ select.form-input option{background:#fff}
     </div>
     <!-- project tabs -->
     <div class="proj-tabs">
-      <button class="proj-tab p1 active" data-pid="nagoya">🏙 名古屋<br>10月案件</button>
-      <button class="proj-tab p2" data-pid="orisen">🏟 オリセン<br>12月案件</button>
+      <button class="proj-tab p1 active" data-pid="nagoya"><span>🏙</span>名古屋案件<span class="tab-date">10月</span></button>
+      <button class="proj-tab p2" data-pid="orisen"><span>🏟</span>オリセン案件<span class="tab-date">12月</span></button>
+      <button class="proj-tab p3" data-pid="march"><span>🌸</span>3月案件<span class="tab-date">3月</span></button>
     </div>
     <nav id="nav">
       <button class="nav-item active" data-view="today"><span class="nav-icon">☀</span>本日のタスク</button>
@@ -253,7 +262,7 @@ select.form-input option{background:#fff}
       <div class="rm-toolbar">
         <div class="rm-seg" id="rm-scope-seg">
           <button class="rm-seg-btn active" data-scope="current">現在の案件</button>
-          <button class="rm-seg-btn" data-scope="all">🏙 名古屋 ＋ 🏟 オリセン</button>
+          <button class="rm-seg-btn" data-scope="all">🏙 名古屋 ＋ 🏟 オリセン ＋ 🌸 3月</button>
         </div>
         <select id="rm-group-sel" style="font-size:12px;padding:5px 8px;border:1px solid var(--border2);border-radius:var(--r);background:var(--bg);color:var(--sub);font-family:inherit;cursor:pointer">
           <option value="tag">タグ別</option>
@@ -272,6 +281,7 @@ select.form-input option{background:#fff}
 const PROJECTS = {
   nagoya: { id:'nagoya', name:'名古屋案件', short:'名古屋', emoji:'🏙', cls:'p1', date:'2026年10月', color:'var(--p1)' },
   orisen: { id:'orisen', name:'オリセン案件', short:'オリセン', emoji:'🏟', cls:'p2', date:'2026年12月', color:'var(--p2)' },
+  march:  { id:'march',  name:'3月案件',    short:'3月',    emoji:'🌸', cls:'p3', date:'2026年3月',  color:'var(--p3)' },
 };
 let currentPid = localStorage.getItem('epm4_current') || 'nagoya';
 
@@ -321,6 +331,22 @@ const DEFAULTS = {
     memo: 'オリセン案件は施設申請を優先。並行して年末の集客戦略を固める。',
     overview: '開催予定：2026年12月\n現フェーズ：施設申請・基本計画\n主な課題：年末時期の競合イベントとの差別化',
   },
+  march: {
+    tasks: [
+      {id:'m1',title:'会場・日程の最終確定',status:'inprogress',priority:'high',tag:'会場',assignee:'自分',due:'2026-04-20',today:true,ghItemId:null},
+      {id:'m2',title:'出演者・登壇者の確定',status:'todo',priority:'high',tag:'制作',assignee:'自分',due:'2026-04-25',today:false,ghItemId:null},
+      {id:'m3',title:'告知解禁・PR開始',status:'todo',priority:'high',tag:'広報',assignee:'山田',due:'2026-05-01',today:false,ghItemId:null},
+      {id:'m4',title:'チケット販売設定',status:'todo',priority:'medium',tag:'管理',assignee:'鈴木',due:'2026-05-10',today:false,ghItemId:null},
+      {id:'m5',title:'当日スタッフ確認・シフト作成',status:'todo',priority:'medium',tag:'運営',assignee:'佐藤',due:'2026-05-15',today:false,ghItemId:null},
+    ],
+    na: [
+      {id:'mn1',text:'会場との最終条件を確認して契約書を締結する',owner:'自分'},
+      {id:'mn2',text:'SNS告知スケジュールをチームと共有する',owner:'山田'},
+      {id:'mn3',text:'チケット販売プラットフォームを選定する',owner:'鈴木'},
+    ],
+    memo: '3月案件は直前フェーズ。会場確定を最優先に動く。告知解禁は5月初旬を目標。',
+    overview: '開催予定：2026年3月\n現フェーズ：直前準備・告知解禁準備\n主な課題：会場最終確定・出演者発表タイミング',
+  },
 };
 
 // ── 状態 ──────────────────────────────────────────────────────────────────────
@@ -368,7 +394,7 @@ function updateProjectUI() {
   });
   // nav color
   document.querySelectorAll('.nav-item').forEach(n => {
-    n.classList.remove('p1','p2');
+    n.classList.remove('p1','p2','p3');
     if (n.classList.contains('active')) n.classList.add(proj.cls);
   });
   // banners
