@@ -42,39 +42,39 @@ nav{padding:12px 10px;flex:1}
 .section-title{font-size:18px;font-weight:700;color:var(--ink)}
 .section-sub{font-size:12px;color:var(--faint)}
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:20px 22px;margin-bottom:14px}
-.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
 .stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:18px 20px}
 .stat-val{font-size:28px;font-weight:700;font-family:'DM Mono',monospace;color:var(--ink)}
 .stat-label{font-size:11px;color:var(--sub);margin-top:4px}
 .stat-card.accent .stat-val{color:var(--accent)}
-.stat-card.green .stat-val{color:var(--green)}
-.stat-card.blue .stat-val{color:var(--blue)}
+.stat-card.green  .stat-val{color:var(--green)}
+.stat-card.blue   .stat-val{color:var(--blue)}
 .prog-wrap{height:6px;background:var(--border);border-radius:4px;overflow:hidden;margin-top:8px}
 .prog-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--amber));transition:width .6s ease}
 .task-row{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--border)}
 .task-row:last-child{border-bottom:none}
-.task-check{width:18px;height:18px;border-radius:50%;border:2px solid var(--border2);flex-shrink:0;cursor:pointer;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
-.task-check.done{background:var(--green);border-color:var(--green);color:#fff}
-.task-check.review{background:var(--amber);border-color:var(--amber);color:#fff}
-.task-check.inprogress{background:var(--blue);border-color:var(--blue);color:#fff}
+.task-check{width:18px;height:18px;border-radius:50%;border:2px solid var(--border2);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
+.task-check.done      {background:var(--green);border-color:var(--green);color:#fff}
+.task-check.review    {background:var(--amber);border-color:var(--amber);color:#fff}
+.task-check.inprogress{background:var(--blue); border-color:var(--blue); color:#fff}
 .task-body{flex:1;min-width:0}
 .task-title{font-size:13px;color:var(--ink);font-weight:500;line-height:1.5}
 .task-title.done-text{text-decoration:line-through;color:var(--faint)}
 .task-meta{display:flex;gap:6px;align-items:center;margin-top:4px;flex-wrap:wrap}
 .tag{font-size:10px;padding:2px 7px;border-radius:20px;font-weight:500}
-.tag-todo{background:var(--bg);color:var(--sub);border:1px solid var(--border2)}
+.tag-todo      {background:var(--bg);color:var(--sub);border:1px solid var(--border2)}
 .tag-inprogress{background:var(--blueL);color:var(--blue)}
-.tag-review{background:var(--amberL);color:var(--amber)}
-.tag-done{background:var(--greenL);color:var(--green)}
-.tag-high{background:rgba(200,80,26,0.08);color:var(--accent)}
+.tag-review    {background:var(--amberL);color:var(--amber)}
+.tag-done      {background:var(--greenL);color:var(--green)}
+.tag-high  {background:rgba(200,80,26,0.08);color:var(--accent)}
 .tag-medium{background:var(--amberL);color:var(--amber)}
-.tag-low{background:var(--bg);color:var(--faint)}
+.tag-low   {background:var(--bg);color:var(--faint)}
 .due-label{font-size:10px;color:var(--faint);font-family:'DM Mono',monospace}
 .due-label.overdue{color:var(--accent)}
 .na-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}
 .na-item:last-child{border-bottom:none}
 .na-num{width:22px;height:22px;border-radius:50%;background:var(--accentL);color:var(--accent);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.na-text{font-size:13px;color:var(--ink);line-height:1.6;flex:1}
+.na-text {font-size:13px;color:var(--ink);line-height:1.6;flex:1}
 .na-owner{font-size:11px;color:var(--faint);margin-top:2px}
 .edit-bar{display:none;background:var(--accentL);border:1px solid rgba(200,80,26,0.15);border-radius:var(--r);padding:10px 14px;margin-bottom:16px;font-size:12px;color:var(--accent);font-weight:500;align-items:center;gap:8px}
 .edit-bar.show{display:flex}
@@ -87,34 +87,10 @@ nav{padding:12px 10px;flex:1}
 select.form-input option{background:#fff}
 .form-row{display:flex;gap:10px}
 .form-row .form-field{flex:1}
-#chat-wrap{display:flex;flex-direction:column;height:calc(100vh - 170px);min-height:400px}
-.chat-messages{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding-bottom:8px;min-height:0}
-.chat-bubble{max-width:78%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.75;white-space:pre-wrap;word-break:break-word}
-.bubble-user{align-self:flex-end;background:var(--ink);color:#fff;border-radius:14px 14px 4px 14px}
-.bubble-bot{align-self:flex-start;background:var(--card);border:1px solid var(--border);color:var(--ink);border-radius:14px 14px 14px 4px}
-.bubble-bot.loading{color:var(--faint)}
-.chat-input-row{display:flex;gap:8px;padding-top:14px;border-top:1px solid var(--border);margin-top:8px;flex-shrink:0}
-.chat-textarea{flex:1;background:var(--bg);border:1px solid var(--border2);border-radius:var(--r);padding:10px 13px;font-size:13px;font-family:inherit;color:var(--ink);resize:none;min-height:42px;max-height:100px;transition:border-color .15s}
-.chat-textarea:focus{outline:none;border-color:var(--accent)}
-.chat-send{background:var(--accent);color:#fff;border:none;border-radius:var(--r);padding:0 16px;font-size:18px;cursor:pointer;flex-shrink:0;height:42px;transition:opacity .15s}
-.chat-send:hover{opacity:.88}
-.chat-send:disabled{opacity:.4;cursor:not-allowed}
-.quick-q{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
-.qq-btn{background:var(--bg);border:1px solid var(--border2);border-radius:20px;padding:5px 12px;font-size:11px;color:var(--sub);cursor:pointer;font-family:inherit;transition:all .15s}
-.qq-btn:hover{background:var(--accentL);border-color:rgba(200,80,26,0.2);color:var(--accent)}
 .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:100;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px)}
 .modal{background:var(--surface);border-radius:var(--r2);padding:28px;width:460px;max-width:94vw;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
 .modal-title{font-size:16px;font-weight:700;margin-bottom:18px}
 .modal-actions{display:flex;gap:8px;margin-top:20px;justify-content:flex-end}
-#setup{position:fixed;inset:0;background:var(--bg);z-index:200;display:flex;align-items:center;justify-content:center}
-#setup.hidden{display:none}
-.setup-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:36px;max-width:420px;width:90%}
-.setup-logo{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--accent);margin-bottom:4px}
-.setup-title{font-size:20px;font-weight:700;margin-bottom:6px}
-.setup-desc{font-size:13px;color:var(--sub);margin-bottom:24px;line-height:1.7}
-.setup-save{width:100%;background:var(--accent);color:#fff;border:none;border-radius:var(--r);padding:11px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:8px;transition:opacity .15s}
-.setup-save:hover{opacity:.88}
-.err{font-size:11px;color:var(--accent);display:none;margin-top:4px}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -122,33 +98,7 @@ select.form-input option{background:#fff}
 </head>
 <body>
 
-<!-- ── Setup (初回のみ表示) ───────────────────────────────────────────────── -->
-<div id="setup">
-  <div class="setup-box">
-    <div class="setup-logo">EVENT PM</div>
-    <div class="setup-title">初回セットアップ</div>
-    <div class="setup-desc">
-      AIアシスタント機能のために Anthropic API キーを入力してください。<br>
-      キーはこのブラウザにのみ保存されます。閲覧するチームメンバーには不要です。
-    </div>
-    <div class="form-field">
-      <div class="form-label">Anthropic API キー</div>
-      <input id="s-apikey" class="form-input" type="password" placeholder="sk-ant-...">
-      <div id="s-err" class="err">APIキーを入力してください</div>
-    </div>
-    <div class="form-field" style="margin-top:4px">
-      <div class="form-label">編集用パスコード（あなただけが設定・知るコード）</div>
-      <input id="s-pass" class="form-input" type="password" placeholder="任意のパスコードを設定">
-      <div style="font-size:11px;color:var(--faint);margin-top:4px">
-        チームメンバーは設定不要。タスクを編集するときに入力します。
-      </div>
-    </div>
-    <button class="setup-save" id="s-save">設定を保存してはじめる →</button>
-  </div>
-</div>
-
-<!-- ── App Shell ─────────────────────────────────────────────────────────── -->
-<div id="shell" style="display:none">
+<div id="shell">
   <div id="side">
     <div class="logo">
       <div class="logo-title">EVENT PM</div>
@@ -159,16 +109,16 @@ select.form-input option{background:#fff}
       <button class="nav-item" data-view="status"><span class="nav-icon">◎</span>ステータス</button>
       <button class="nav-item" data-view="next"><span class="nav-icon">▶</span>ネクストアクション</button>
       <button class="nav-item" data-view="tasks"><span class="nav-icon">☑</span>タスク一覧</button>
-      <button class="nav-item" data-view="bot"><span class="nav-icon">✦</span>AIアシスタント</button>
     </nav>
     <div class="side-footer">
       <button class="edit-toggle" id="editToggleBtn">✎ 編集モード</button>
-      <button class="settings-btn" id="settingsBtn">⚙ APIキー・パスコード設定</button>
+      <button class="settings-btn" id="settingsBtn">⚙ パスコード設定</button>
     </div>
   </div>
 
   <div id="main">
-    <!-- TODAY ──────────────────────────────────────────────────────────── -->
+
+    <!-- TODAY -->
     <div class="view show" id="view-today">
       <div class="section-head">
         <div>
@@ -177,18 +127,15 @@ select.form-input option{background:#fff}
         </div>
         <button class="edit-btn ghost" id="add-today-btn" style="display:none">＋ タスクを追加</button>
       </div>
-      <div class="edit-bar" id="eb-today">
-        <span>✎ 編集モード有効 — タスクを追加・完了できます</span>
-      </div>
+      <div class="edit-bar" id="eb-today"><span>✎ 編集モード有効 — タスクの追加・完了ができます</span></div>
       <div class="card" id="today-list"></div>
-
       <div class="section-head" style="margin-top:8px">
         <div class="section-title" style="font-size:15px">進捗メモ</div>
       </div>
       <div class="card" id="memo-area"></div>
     </div>
 
-    <!-- STATUS ─────────────────────────────────────────────────────────── -->
+    <!-- STATUS -->
     <div class="view" id="view-status">
       <div class="section-head">
         <div class="section-title">プロジェクト全体ステータス</div>
@@ -198,7 +145,7 @@ select.form-input option{background:#fff}
       <div class="card" id="overview-card"></div>
     </div>
 
-    <!-- NEXT ACTIONS ───────────────────────────────────────────────────── -->
+    <!-- NEXT ACTIONS -->
     <div class="view" id="view-next">
       <div class="section-head">
         <div>
@@ -211,7 +158,7 @@ select.form-input option{background:#fff}
       <div class="card" id="na-list"></div>
     </div>
 
-    <!-- TASKS ──────────────────────────────────────────────────────────── -->
+    <!-- TASKS -->
     <div class="view" id="view-tasks">
       <div class="section-head">
         <div class="section-title">タスク一覧</div>
@@ -221,83 +168,61 @@ select.form-input option{background:#fff}
       <div class="card" id="task-list"></div>
     </div>
 
-    <!-- BOT ────────────────────────────────────────────────────────────── -->
-    <div class="view" id="view-bot">
-      <div class="section-head">
-        <div>
-          <div class="section-title">AIアシスタント</div>
-          <div class="section-sub">プロジェクトの状況を把握して回答します</div>
-        </div>
-      </div>
-      <div class="quick-q" id="quick-q"></div>
-      <div id="chat-wrap">
-        <div class="chat-messages" id="chat-msgs"></div>
-        <div class="chat-input-row">
-          <textarea class="chat-textarea" id="chat-in" rows="1" placeholder="質問を入力 (Enter で送信、Shift+Enter で改行)"></textarea>
-          <button class="chat-send" id="chat-send">↑</button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
 <script>
-// ── ストレージ ────────────────────────────────────────────────────────────────
+// ── ストレージ ─────────────────────────────────────────────────────────────────
 const S = {
-  get: (k, def) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch { return def; } },
-  set: (k, v)  => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
-  raw: (k)     => localStorage.getItem(k) || '',
-  rawSet: (k,v)=> localStorage.setItem(k, v),
+  get:    (k, def) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch { return def; } },
+  set:    (k, v)   => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  raw:    (k)      => localStorage.getItem(k) || '',
+  rawSet: (k, v)   => localStorage.setItem(k, v),
 };
-const apiKey   = () => S.raw('epm2_apikey');
-const passcode = () => S.raw('epm2_pass');
+const passcode = () => S.raw('epm3_pass');
 
-// ── 初期データ ────────────────────────────────────────────────────────────────
-let tasks = S.get('epm2_tasks', [
-  { id:'t1', title:'イベント企画書の作成',       status:'inprogress', priority:'high',   tag:'企画', assignee:'自分', due:'2026-04-10', today:true  },
-  { id:'t2', title:'ベニュー候補リスト作成',     status:'todo',       priority:'high',   tag:'会場', assignee:'自分', due:'2026-04-15', today:false },
-  { id:'t3', title:'スポンサー提案書の初稿',     status:'review',     priority:'high',   tag:'資金', assignee:'鈴木', due:'2026-04-18', today:false },
-  { id:'t4', title:'キックオフMTG議事録整理',    status:'done',       priority:'low',    tag:'管理', assignee:'自分', due:'2026-04-05', today:false },
-  { id:'t5', title:'SNSプロモーション計画',      status:'todo',       priority:'medium', tag:'広報', assignee:'山田', due:'2026-04-25', today:false },
-  { id:'t6', title:'予算計画書の策定',           status:'todo',       priority:'high',   tag:'財務', assignee:'自分', due:'2026-04-20', today:true  },
+// ── 初期データ ─────────────────────────────────────────────────────────────────
+let tasks = S.get('epm3_tasks', [
+  { id:'t1', title:'イベント企画書の作成',    status:'inprogress', priority:'high',   tag:'企画', assignee:'自分', due:'2026-04-10', today:true  },
+  { id:'t2', title:'ベニュー候補リスト作成',  status:'todo',       priority:'high',   tag:'会場', assignee:'自分', due:'2026-04-15', today:false },
+  { id:'t3', title:'スポンサー提案書の初稿',  status:'review',     priority:'high',   tag:'資金', assignee:'鈴木', due:'2026-04-18', today:false },
+  { id:'t4', title:'キックオフMTG議事録整理', status:'done',       priority:'low',    tag:'管理', assignee:'自分', due:'2026-04-05', today:false },
+  { id:'t5', title:'SNSプロモーション計画',   status:'todo',       priority:'medium', tag:'広報', assignee:'山田', due:'2026-04-25', today:false },
+  { id:'t6', title:'予算計画書の策定',        status:'todo',       priority:'high',   tag:'財務', assignee:'自分', due:'2026-04-20', today:true  },
 ]);
-let nextActions = S.get('epm2_na', [
-  { id:'n1', text:'企画書のフォーマットを確定してチームに共有する',         owner:'自分' },
-  { id:'n2', text:'ベニュー3候補に見積もり依頼メールを送付する',            owner:'自分' },
-  { id:'n3', text:'スポンサー提案書のレビュー結果を鈴木さんに返す',         owner:'鈴木' },
-  { id:'n4', text:'予算計画書の経費項目リストアップを完了させる',           owner:'自分' },
+let nextActions = S.get('epm3_na', [
+  { id:'n1', text:'企画書のフォーマットを確定してチームに共有する',  owner:'自分' },
+  { id:'n2', text:'ベニュー3候補に見積もり依頼メールを送付する',     owner:'自分' },
+  { id:'n3', text:'スポンサー提案書のレビュー結果を鈴木さんに返す',  owner:'鈴木' },
+  { id:'n4', text:'予算計画書の経費項目リストアップを完了させる',    owner:'自分' },
 ]);
-let memo     = S.get('epm2_memo',     '企画フェーズは順調に進行中。スポンサー交渉を今週から本格化させる予定。ベニューの最終決定を4月末までに行いたい。');
-let overview = S.get('epm2_overview', 'イベント開催予定：2026年6月中旬\n現フェーズ：企画・準備フェーズ\n主な課題：スポンサー確保・予算確定');
-let chatLog  = S.get('epm2_chat',     []);
+let memo     = S.get('epm3_memo',     '企画フェーズは順調に進行中。スポンサー交渉を今週から本格化させる予定。ベニューの最終決定を4月末までに行いたい。');
+let overview = S.get('epm3_overview', 'イベント開催予定：2026年6月中旬\n現フェーズ：企画・準備フェーズ\n主な課題：スポンサー確保・予算確定');
 let editMode = false;
 
-const saveTasks = () => S.set('epm2_tasks', tasks);
-const saveNA    = () => S.set('epm2_na', nextActions);
+const saveTasks = () => S.set('epm3_tasks', tasks);
+const saveNA    = () => S.set('epm3_na', nextActions);
 
-// ── セットアップ ───────────────────────────────────────────────────────────────
-(function initSetup() {
-  if (apiKey()) { boot(); return; }
-  document.getElementById('s-save').addEventListener('click', () => {
-    const k = document.getElementById('s-apikey').value.trim();
-    if (!k) { document.getElementById('s-err').style.display = 'block'; return; }
-    S.rawSet('epm2_apikey', k);
-    S.rawSet('epm2_pass',   document.getElementById('s-pass').value.trim());
-    boot();
-  });
-})();
-
-function boot() {
-  document.getElementById('setup').classList.add('hidden');
-  document.getElementById('shell').style.display = 'flex';
-  initNav();
-  renderAll();
-  initChat();
-  initEditToggle();
-  initSettings();
-  document.getElementById('today-date').textContent =
-    new Date().toLocaleDateString('ja-JP', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+// ── DOM ヘルパー ───────────────────────────────────────────────────────────────
+function el(tag, attrs = {}, text) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') e.className = v;
+    else if (k === 'style') e.style.cssText = v;
+    else e.setAttribute(k, v);
+  }
+  if (text !== undefined) e.textContent = text;
+  return e;
 }
+
+// ── 起動 ──────────────────────────────────────────────────────────────────────
+document.getElementById('today-date').textContent =
+  new Date().toLocaleDateString('ja-JP', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+
+initNav();
+initEditToggle();
+initSettings();
+renderAll();
 
 // ── ナビゲーション ─────────────────────────────────────────────────────────────
 function initNav() {
@@ -305,7 +230,7 @@ function initNav() {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      document.querySelectorAll('.view').forEach(el => el.classList.remove('show'));
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('show'));
       document.getElementById('view-' + btn.dataset.view).classList.add('show');
     });
   });
@@ -322,33 +247,30 @@ function initEditToggle() {
     else if (input !== null) alert('パスコードが違います');
   });
 }
+
 function setEdit(on) {
   editMode = on;
   const btn = document.getElementById('editToggleBtn');
   btn.classList.toggle('active', on);
   btn.textContent = on ? '✎ 編集モード ON' : '✎ 編集モード';
-  document.querySelectorAll('.edit-bar').forEach(el => el.classList.toggle('show', on));
-  ['add-today-btn','add-na-btn','add-task-btn'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = on ? '' : 'none';
+  document.querySelectorAll('.edit-bar').forEach(e => e.classList.toggle('show', on));
+  ['add-today-btn', 'add-na-btn', 'add-task-btn'].forEach(id => {
+    const e = document.getElementById(id);
+    if (e) e.style.display = on ? '' : 'none';
   });
   renderAll();
 }
 
-// ── 設定モーダル ───────────────────────────────────────────────────────────────
+// ── パスコード設定 ─────────────────────────────────────────────────────────────
 function initSettings() {
   document.getElementById('settingsBtn').addEventListener('click', () => {
-    const form = document.createElement('div');
-    const { wrap: kw, inp: keyI } = fi('Anthropic API キー', 'password', 'sk-ant-...');
-    keyI.value = apiKey();
-    const { wrap: pw, inp: passI } = fi('編集パスコード', 'password', '変更する場合のみ入力');
-    const note = document.createElement('div');
-    note.style.cssText = 'font-size:11px;color:var(--faint);margin-top:-4px';
-    note.textContent = 'APIキーはこのブラウザにのみ保存されます';
-    [kw, pw, note].forEach(el => form.appendChild(el));
-    makeModal('設定', form, () => {
-      if (keyI.value.trim())  S.rawSet('epm2_apikey', keyI.value.trim());
-      if (passI.value.trim()) S.rawSet('epm2_pass',   passI.value.trim());
+    const form = el('div');
+    const { wrap: pw, inp: passI } = fi('編集パスコード', 'password', '新しいパスコードを入力');
+    const note = el('div', { style:'font-size:11px;color:var(--faint);margin-top:-6px;margin-bottom:4px' },
+      '設定するとURLを知っていても編集できなくなります。空欄で保存するとパスコードなしになります。');
+    [pw, note].forEach(e => form.appendChild(e));
+    makeModal('パスコード設定', form, () => {
+      S.rawSet('epm3_pass', passI.value.trim());
       return true;
     }, '保存');
   });
@@ -367,40 +289,40 @@ function renderToday() {
   if (active.length === 0 && done.length === 0) {
     container.innerHTML = '<div style="color:var(--faint);font-size:13px;padding:4px 0">本日のタスクはありません</div>';
   } else {
-    [...active, ...done].forEach(t => container.appendChild(makeTaskRow(t, true)));
+    [...active, ...done].forEach(t => container.appendChild(makeTaskRow(t)));
   }
 
   // 進捗メモ
   const memoEl = document.getElementById('memo-area');
   memoEl.innerHTML = '';
-  const mLabel = el('div', { style:'font-size:12px;font-weight:600;color:var(--sub);letter-spacing:.06em;margin-bottom:10px' }, '進捗メモ');
-  memoEl.appendChild(mLabel);
+  memoEl.appendChild(el('div', { style:'font-size:12px;font-weight:600;color:var(--sub);letter-spacing:.06em;margin-bottom:10px' }, '進捗メモ'));
   if (editMode) {
     const ta = el('textarea', { class:'form-input', style:'width:100%;min-height:80px;resize:vertical;font-size:13px;line-height:1.7' });
     ta.value = memo;
-    ta.addEventListener('input', () => { memo = ta.value; S.set('epm2_memo', memo); });
+    ta.addEventListener('input', () => { memo = ta.value; S.set('epm3_memo', memo); });
     memoEl.appendChild(ta);
   } else {
-    memoEl.appendChild(el('div', { style:'font-size:13px;line-height:1.85;white-space:pre-wrap;color:var(--ink)' }, memo));
+    memoEl.appendChild(el('div', { style:'font-size:13px;line-height:1.85;white-space:pre-wrap;color:var(--ink)' }, memo || '（メモなし）'));
   }
-
   document.getElementById('add-today-btn').onclick = () => showAddTask(true);
 }
 
 // ── タスク行の生成 ─────────────────────────────────────────────────────────────
-function makeTaskRow(t, showCheck) {
+function makeTaskRow(t) {
   const isDone = t.status === 'done';
-  const row = el('div', { class:'task-row' });
+  const row    = el('div', { class:'task-row' });
 
-  if (showCheck) {
-    const chkClass = isDone ? 'done' : t.status === 'review' ? 'review' : t.status === 'inprogress' ? 'inprogress' : '';
-    const chk = el('div', { class:'task-check ' + chkClass }, isDone ? '✓' : t.status === 'review' ? '…' : t.status === 'inprogress' ? '▶' : '');
-    if (editMode) {
-      chk.style.cursor = 'pointer';
-      chk.addEventListener('click', () => { t.status = isDone ? 'todo' : 'done'; saveTasks(); renderAll(); });
-    }
-    row.appendChild(chk);
+  const chkClass = isDone ? 'done' : t.status === 'review' ? 'review' : t.status === 'inprogress' ? 'inprogress' : '';
+  const chk = el('div', { class:'task-check ' + chkClass },
+    isDone ? '✓' : t.status === 'review' ? '…' : t.status === 'inprogress' ? '▶' : '');
+  if (editMode) {
+    chk.style.cursor = 'pointer';
+    chk.addEventListener('click', () => {
+      t.status = isDone ? 'todo' : 'done';
+      saveTasks(); renderAll();
+    });
   }
+  row.appendChild(chk);
 
   const body = el('div', { class:'task-body' });
   body.appendChild(el('div', { class:'task-title' + (isDone ? ' done-text' : '') }, t.title));
@@ -410,6 +332,7 @@ function makeTaskRow(t, showCheck) {
   meta.appendChild(el('span', { class:'tag tag-' + t.status }, statusLabel[t.status] || t.status));
   if (t.tag)      meta.appendChild(el('span', { class:'tag tag-todo' }, t.tag));
   if (t.priority) meta.appendChild(el('span', { class:'tag tag-' + t.priority }, { high:'高優先', medium:'中優先', low:'低優先' }[t.priority]));
+  if (t.assignee) meta.appendChild(el('span', { style:'font-size:10px;color:var(--faint)' }, '担当: ' + t.assignee));
   if (t.due) {
     const isOver = new Date(t.due) < new Date() && t.status !== 'done';
     meta.appendChild(el('span', { class:'due-label' + (isOver ? ' overdue' : '') }, (isOver ? '⚠ 期日超過 ' : '') + '期日: ' + t.due));
@@ -418,7 +341,7 @@ function makeTaskRow(t, showCheck) {
   row.appendChild(body);
 
   if (editMode) {
-    const del = el('button', { style:'background:none;border:none;color:var(--faint);cursor:pointer;font-size:15px;padding:0;flex-shrink:0;margin-top:1px' }, '×');
+    const del = el('button', { style:'background:none;border:none;color:var(--faint);cursor:pointer;font-size:16px;padding:0;flex-shrink:0;line-height:1;margin-top:1px' }, '×');
     del.addEventListener('click', () => { tasks = tasks.filter(x => x.id !== t.id); saveTasks(); renderAll(); });
     row.appendChild(del);
   }
@@ -434,8 +357,10 @@ function renderStatus() {
 
   const grid = document.getElementById('stat-grid');
   grid.innerHTML = '';
-  [{ label:'総タスク数', val:total, cls:'' }, { label:'進行中', val:counts.inprogress, cls:'blue' },
-   { label:'レビュー待ち', val:counts.review, cls:'accent' }, { label:'完了', val:counts.done, cls:'green' }]
+  [{ label:'総タスク数', val:total, cls:'' },
+   { label:'進行中',     val:counts.inprogress, cls:'blue' },
+   { label:'レビュー待ち', val:counts.review,   cls:'accent' },
+   { label:'完了',       val:counts.done,        cls:'green' }]
   .forEach(s => {
     const c = el('div', { class:'stat-card ' + s.cls });
     c.appendChild(el('div', { class:'stat-val' }, String(s.val)));
@@ -443,8 +368,7 @@ function renderStatus() {
     grid.appendChild(c);
   });
 
-  const pc = document.getElementById('progress-card');
-  pc.innerHTML = `
+  document.getElementById('progress-card').innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
       <div style="font-size:13px;font-weight:600">全体進捗率</div>
       <div style="font-size:22px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent)">${pct}%</div>
@@ -462,10 +386,10 @@ function renderStatus() {
   if (editMode) {
     const ta = el('textarea', { class:'form-input', style:'width:100%;min-height:80px;resize:vertical;font-size:13px;line-height:1.7' });
     ta.value = overview;
-    ta.addEventListener('input', () => { overview = ta.value; S.set('epm2_overview', overview); });
+    ta.addEventListener('input', () => { overview = ta.value; S.set('epm3_overview', overview); });
     oc.appendChild(ta);
   } else {
-    oc.appendChild(el('div', { style:'font-size:13px;line-height:1.85;white-space:pre-wrap;color:var(--ink)' }, overview));
+    oc.appendChild(el('div', { style:'font-size:13px;line-height:1.85;white-space:pre-wrap;color:var(--ink)' }, overview || '（概要なし）'));
   }
 }
 
@@ -475,18 +399,18 @@ function renderNextActions() {
   list.innerHTML = '';
   if (nextActions.length === 0) {
     list.appendChild(el('div', { style:'color:var(--faint);font-size:13px' }, 'ネクストアクションはありません'));
+    document.getElementById('add-na-btn').onclick = showAddNA;
     return;
   }
   nextActions.forEach((na, i) => {
     const row  = el('div', { class:'na-item' });
-    const num  = el('div', { class:'na-num' }, String(i + 1));
     const body = el('div', { style:'flex:1' });
     body.appendChild(el('div', { class:'na-text' }, na.text));
     if (na.owner) body.appendChild(el('div', { class:'na-owner' }, '担当: ' + na.owner));
-    row.appendChild(num);
+    row.appendChild(el('div', { class:'na-num' }, String(i + 1)));
     row.appendChild(body);
     if (editMode) {
-      const del = el('button', { style:'background:none;border:none;color:var(--faint);cursor:pointer;font-size:15px;padding:0;flex-shrink:0' }, '×');
+      const del = el('button', { style:'background:none;border:none;color:var(--faint);cursor:pointer;font-size:16px;padding:0;flex-shrink:0;line-height:1' }, '×');
       del.addEventListener('click', () => { nextActions = nextActions.filter(x => x.id !== na.id); saveNA(); renderNextActions(); });
       row.appendChild(del);
     }
@@ -497,15 +421,14 @@ function renderNextActions() {
 
 // ── タスク一覧 ────────────────────────────────────────────────────────────────
 function renderTasks() {
-  const list = document.getElementById('task-list');
+  const list  = document.getElementById('task-list');
   list.innerHTML = '';
   const order = { inprogress:0, review:1, todo:2, done:3 };
   [...tasks].sort((a, b) => (order[a.status] || 0) - (order[b.status] || 0)).forEach(t => {
-    const row = makeTaskRow(t, true);
+    const row = makeTaskRow(t);
     if (editMode) {
       const todayLabel = el('label', { style:'display:flex;align-items:center;gap:5px;font-size:11px;color:var(--sub);cursor:pointer;flex-shrink:0;white-space:nowrap' });
-      const cb = el('input');
-      cb.type = 'checkbox'; cb.checked = t.today; cb.style.accentColor = 'var(--accent)';
+      const cb = el('input'); cb.type = 'checkbox'; cb.checked = t.today; cb.style.accentColor = 'var(--accent)';
       cb.addEventListener('change', () => { t.today = cb.checked; saveTasks(); renderAll(); });
       todayLabel.appendChild(cb);
       todayLabel.appendChild(document.createTextNode('今日'));
@@ -516,7 +439,7 @@ function renderTasks() {
   document.getElementById('add-task-btn').onclick = () => showAddTask(false);
 }
 
-// ── モーダル共通 ───────────────────────────────────────────────────────────────
+// ── モーダル ──────────────────────────────────────────────────────────────────
 function makeModal(title, content, onSave, saveLabel = '追加') {
   const bg = el('div', { class:'modal-bg' });
   const m  = el('div', { class:'modal' });
@@ -548,11 +471,11 @@ function fi(label, type, placeholder) {
 }
 
 function showAddTask(asToday) {
-  const { wrap:tw, inp:titleI }    = fi('タスク名 *',  'text',     '例: スポンサーに連絡する');
-  const { wrap:aw, inp:assigneeI } = fi('担当者',      'text',     '例: 自分');
-  const { wrap:dw, inp:dueI }      = fi('期日',        'date',     '');
-  const { wrap:tagW, inp:tagI }    = fi('タグ',        'text',     '例: 広報, 財務');
-  const { wrap:pw, inp:priSel }    = fi('優先度',      'select',   '');
+  const { wrap:tw, inp:titleI }    = fi('タスク名 *',  'text',   '例: スポンサーに連絡する');
+  const { wrap:aw, inp:assigneeI } = fi('担当者',      'text',   '例: 自分');
+  const { wrap:dw, inp:dueI }      = fi('期日',        'date',   '');
+  const { wrap:tagW, inp:tagI }    = fi('タグ',        'text',   '例: 広報, 財務');
+  const { wrap:pw, inp:priSel }    = fi('優先度',      'select', '');
   [['high','高優先'],['medium','中優先'],['low','低優先']].forEach(([v,l]) => {
     const o = el('option'); o.value = v; o.textContent = l; priSel.appendChild(o);
   });
@@ -571,7 +494,16 @@ function showAddTask(asToday) {
 
   makeModal('タスクを追加', form, () => {
     if (!titleI.value.trim()) return false;
-    tasks.push({ id:'t'+Date.now(), title:titleI.value.trim(), assignee:assigneeI.value, due:dueI.value, tag:tagI.value, priority:priSel.value, status:stSel.value, today:cb.checked });
+    tasks.push({
+      id: 't' + Date.now(),
+      title:    titleI.value.trim(),
+      assignee: assigneeI.value,
+      due:      dueI.value,
+      tag:      tagI.value,
+      priority: priSel.value,
+      status:   stSel.value,
+      today:    cb.checked,
+    });
     saveTasks(); renderAll(); return true;
   });
 }
@@ -583,132 +515,9 @@ function showAddNA() {
   [tw, ow].forEach(e => form.appendChild(e));
   makeModal('ネクストアクションを追加', form, () => {
     if (!textI.value.trim()) return false;
-    nextActions.push({ id:'n'+Date.now(), text:textI.value.trim(), owner:ownerI.value });
+    nextActions.push({ id:'n' + Date.now(), text:textI.value.trim(), owner:ownerI.value });
     saveNA(); renderNextActions(); return true;
   });
-}
-
-// ── AIアシスタント（Bot） ──────────────────────────────────────────────────────
-const QUICK_Qs = ['今日やることは？','進捗を教えて','緊急タスクは？','次のアクションは？','課題はある？'];
-
-function initChat() {
-  const qEl = document.getElementById('quick-q');
-  QUICK_Qs.forEach(q => {
-    const b = el('button', { class:'qq-btn' }, q);
-    b.addEventListener('click', () => sendChat(q));
-    qEl.appendChild(b);
-  });
-  if (chatLog.length === 0) {
-    chatLog = [{ r:'bot', t:'こんにちは！\nプロジェクトのAIアシスタントです。タスクの状況・進捗・ネクストアクションなど、何でもお気軽にご質問ください。' }];
-  }
-  renderChat();
-  document.getElementById('chat-send').addEventListener('click', () => sendChat());
-  document.getElementById('chat-in').addEventListener('keydown', e => {
-    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
-  });
-}
-
-function renderChat() {
-  const container = document.getElementById('chat-msgs');
-  container.innerHTML = '';
-  chatLog.forEach(m => {
-    const b = el('div', { class:'chat-bubble ' + (m.r === 'user' ? 'bubble-user' : 'bubble-bot' + (m.loading ? ' loading' : '')) }, m.t);
-    container.appendChild(b);
-  });
-  container.scrollTop = container.scrollHeight;
-}
-
-function buildContext() {
-  const counts = { todo:0, inprogress:0, review:0, done:0 };
-  tasks.forEach(t => counts[t.status] = (counts[t.status] || 0) + 1);
-  const todayList   = tasks.filter(t => t.today && t.status !== 'done').map(t => `- ${t.title}（${t.tag || ''}・期日:${t.due || '未定'}）`).join('\n') || 'なし';
-  const urgentList  = tasks.filter(t => t.priority === 'high' && t.status !== 'done').map(t => `- ${t.title}（${t.status}・期日:${t.due || '未定'}）`).join('\n') || 'なし';
-  const naList      = nextActions.map((n, i) => `${i+1}. ${n.text}（担当:${n.owner || '未定'}）`).join('\n') || 'なし';
-  const allTasks    = tasks.map(t => `- [${t.status}] ${t.title}（優先:${t.priority}・期日:${t.due || '未定'}）`).join('\n');
-
-  return `あなたはイベント推進プロジェクトのAIアシスタントです。以下のプロジェクト情報を元に、日本語で簡潔かつ実用的に回答してください。
-
-【プロジェクト概要】
-${overview}
-
-【タスク状況】
-未着手:${counts.todo}件 / 進行中:${counts.inprogress}件 / レビュー:${counts.review}件 / 完了:${counts.done}件（全${tasks.length}件）
-
-【本日のタスク】
-${todayList}
-
-【高優先度・未完了タスク】
-${urgentList}
-
-【ネクストアクション】
-${naList}
-
-【進捗メモ】
-${memo}
-
-【全タスク一覧】
-${allTasks}
-
-回答は簡潔に。必要に応じて箇条書きを使ってください。`;
-}
-
-let chatLoading = false;
-async function sendChat(preset) {
-  const chatIn  = document.getElementById('chat-in');
-  const sendBtn = document.getElementById('chat-send');
-  const msg = (preset || chatIn.value).trim();
-  if (!msg || chatLoading) return;
-  chatIn.value = '';
-
-  chatLog.push({ r:'user', t:msg });
-  chatLog.push({ r:'bot',  t:'回答を生成中…', loading:true });
-  chatLoading = true; sendBtn.disabled = true;
-  renderChat();
-
-  // botへ渡す会話履歴（直近10往復・loading除く）
-  const history = chatLog
-    .filter(m => !m.loading)
-    .slice(-20)
-    .map(m => ({ role: m.r === 'user' ? 'user' : 'assistant', content: m.t }));
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey(),
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',  // コスト最小モデルを使用
-        max_tokens: 600,
-        system: buildContext(),
-        messages: history,
-      }),
-    });
-    const data  = await res.json();
-    const reply = data.content?.find(b => b.type === 'text')?.text || 'エラーが発生しました。';
-    chatLog[chatLog.length - 1] = { r:'bot', t:reply };
-  } catch (e) {
-    chatLog[chatLog.length - 1] = { r:'bot', t:'エラー: ' + e.message };
-  }
-
-  chatLoading = false; sendBtn.disabled = false;
-  S.set('epm2_chat', chatLog.slice(-40));
-  renderChat();
-}
-
-// ── DOM ヘルパー ──────────────────────────────────────────────────────────────
-function el(tag, attrs = {}, text) {
-  const e = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k === 'class') e.className = v;
-    else if (k === 'style') e.style.cssText = v;
-    else e.setAttribute(k, v);
-  }
-  if (text !== undefined) e.textContent = text;
-  return e;
 }
 </script>
 </body>
