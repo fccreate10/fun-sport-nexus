@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-04-02T00:00:00.000Z",
+  "projects": {
+    "nagoya": {
+      "tasks": [
+        {"id":"n1","ghItemId":"n1","title":"名古屋会場の下見・選定","status":"inprogress","priority":"high","tag":"会場","assignee":"自分","due":"2026-05-20","today":false},
+        {"id":"n2","ghItemId":"n2","title":"ローカルスポンサー候補リスト作成","status":"todo","priority":"high","tag":"資金","assignee":"鈴木","due":"2026-05-25","today":false},
+        {"id":"n3","ghItemId":"n3","title":"名古屋スタッフ手配","status":"todo","priority":"medium","tag":"運営","assignee":"自分","due":"2026-06-15","today":false},
+        {"id":"n4","ghItemId":"n4","title":"告知・集客プラン策定","status":"todo","priority":"high","tag":"広報","assignee":"山田","due":"2026-06-01","today":false}
+      ],
+      "nextActions": [
+        {"id":"nn1","text":"会場3候補に見積もり依頼メールを送付する","owner":"自分"},
+        {"id":"nn2","text":"地元スポンサーへのアプローチ方法を検討する","owner":"鈴木"}
+      ],
+      "memo": "名古屋案件は会場選定フェーズ。GW明けまでに候補を絞り込みたい。",
+      "overview": "開催予定：2026年10月\n現フェーズ：会場・スポンサー選定\n主な課題：名古屋エリアでの集客基盤の確立"
+    },
+    "orisen": {
+      "tasks": [
+        {"id":"o1","ghItemId":"o1","title":"オリセン使用申請・手続き","status":"inprogress","priority":"high","tag":"会場","assignee":"自分","due":"2026-05-30","today":false},
+        {"id":"o2","ghItemId":"o2","title":"年末スケジュール調整","status":"todo","priority":"high","tag":"管理","assignee":"自分","due":"2026-06-10","today":false},
+        {"id":"o3","ghItemId":"o3","title":"東京スタッフ編成","status":"todo","priority":"medium","tag":"運営","assignee":"佐藤","due":"2026-07-15","today":false},
+        {"id":"o4","ghItemId":"o4","title":"メインアクト交渉","status":"todo","priority":"high","tag":"制作","assignee":"自分","due":"2026-07-01","today":false}
+      ],
+      "nextActions": [
+        {"id":"on1","text":"オリセン担当者にヒアリング日程を確認する","owner":"自分"},
+        {"id":"on2","text":"12月クロージングの規模感をチームと合意する","owner":"自分"}
+      ],
+      "memo": "オリセン案件は施設申請を優先。並行して年末の集客戦略を固める。",
+      "overview": "開催予定：2026年12月\n現フェーズ：施設申請・基本計画\n主な課題：年末時期の競合イベントとの差別化"
+    },
+    "march": {
+      "tasks": [
+        {"id":"m1","ghItemId":"m1","title":"会場・日程の最終確定","status":"inprogress","priority":"high","tag":"会場","assignee":"自分","due":"2026-04-20","today":false},
+        {"id":"m2","ghItemId":"m2","title":"出演者・登壇者の確定","status":"todo","priority":"high","tag":"制作","assignee":"自分","due":"2026-04-25","today":false},
+        {"id":"m3","ghItemId":"m3","title":"告知解禁・PR開始","status":"todo","priority":"high","tag":"広報","assignee":"山田","due":"2026-05-01","today":false},
+        {"id":"m4","ghItemId":"m4","title":"チケット販売設定","status":"todo","priority":"medium","tag":"管理","assignee":"鈴木","due":"2026-05-10","today":false}
+      ],
+      "nextActions": [
+        {"id":"mn1","text":"会場との最終条件を確認して契約書を締結する","owner":"自分"},
+        {"id":"mn2","text":"SNS告知スケジュールをチームと共有する","owner":"山田"}
+      ],
+      "memo": "3月案件は直前フェーズ。会場確定を最優先に動く。",
+      "overview": "開催予定：2026年3月\n現フェーズ：直前準備・告知解禁準備\n主な課題：会場最終確定・出演者発表タイミング"
+    }
+  }
+}
