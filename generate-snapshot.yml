@@ -1,0 +1,43 @@
+name: スナップショット更新
+
+on:
+  schedule:
+    # 15分ごとに更新（UTC）
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+  # タスク操作時も即時更新したい場合は push トリガーも追加可能
+  push:
+    branches: [main]
+    paths:
+      - '.github/scripts/generate-snapshot.js'
+
+permissions:
+  contents: write   # snapshot.json をコミットするため
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: スナップショットを生成
+        run: node .github/scripts/generate-snapshot.js
+        env:
+          GH_TOKEN:       ${{ secrets.GH_PROJECT_TOKEN }}
+          PROJECTS_CONFIG: ${{ secrets.PROJECTS_CONFIG }}
+          # メモ・概要・ネクストアクションは別途管理（下記参照）
+          EXTRA_DATA:     ${{ secrets.EXTRA_DATA }}
+
+      - name: snapshot.json をコミット
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add snapshot.json
+          # 変更がなければスキップ
+          git diff --cached --quiet && echo "変更なし、スキップ" && exit 0
+          git commit -m "chore: snapshot更新 $(date '+%Y-%m-%d %H:%M JST' --date='9 hours')"
+          git push
