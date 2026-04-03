@@ -1,53 +1,8 @@
 {
-  "generatedAt": "2026-04-03T04:28:21.227Z",
+  "generatedAt": "2026-04-03T05:56:26.197Z",
   "projects": {
     "nagoya": {
-      "tasks": [
-        {
-          "id": "PVTI_lAHODXh-Vs4BQ3SYzgo7_6M",
-          "ghItemId": "PVTI_lAHODXh-Vs4BQ3SYzgo7_6M",
-          "title": "年末スケジュール調整",
-          "status": "todo",
-          "priority": "medium",
-          "tag": "",
-          "assignee": "",
-          "due": "",
-          "today": false
-        },
-        {
-          "id": "PVTI_lAHODXh-Vs4BQ3SYzgo7_6c",
-          "ghItemId": "PVTI_lAHODXh-Vs4BQ3SYzgo7_6c",
-          "title": "東京スタッフ編成",
-          "status": "todo",
-          "priority": "medium",
-          "tag": "",
-          "assignee": "",
-          "due": "",
-          "today": false
-        },
-        {
-          "id": "PVTI_lAHODXh-Vs4BQ3SYzgo7_6k",
-          "ghItemId": "PVTI_lAHODXh-Vs4BQ3SYzgo7_6k",
-          "title": "予算計画（クロージングイベント仕様）",
-          "status": "todo",
-          "priority": "medium",
-          "tag": "",
-          "assignee": "",
-          "due": "",
-          "today": false
-        },
-        {
-          "id": "PVTI_lAHODXh-Vs4BQ3SYzgo7_58",
-          "ghItemId": "PVTI_lAHODXh-Vs4BQ3SYzgo7_58",
-          "title": "オリセン使用申請・手続き",
-          "status": "todo",
-          "priority": "medium",
-          "tag": "",
-          "assignee": "",
-          "due": "",
-          "today": false
-        }
-      ],
+      "tasks": [],
       "nextActions": [],
       "memo": "",
       "overview": ""
